@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         const val defaultOption = R.id.action_deals
     }
 
-    val fragments: HashMap<Int, Fragment> = hashMapOf(
+    private val fragments: HashMap<Int, Fragment> = hashMapOf(
             Pair(R.id.action_deals, DealsFragment()),
             Pair(R.id.action_top_rated, TopRatedFragment()),
             Pair(R.id.action_most_owned, TopOwnedFragment())
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         initView()
 
         navigationView.selectedItemId = defaultOption
-        navigationView.setOnNavigationItemReselectedListener { item ->
+        navigationView.setOnNavigationItemSelectedListener { item ->
             val fragment = fragments[item.itemId]
             fragment?.let {
                 replaceFragment(fragment)
@@ -38,16 +38,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, fragment)
-                .commit()
+                .replace(R.id.fragmentContainer, fragment).commit()
     }
 
     private fun initView() {
         val currentFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer)
         if (currentFragment == null) {
             supportFragmentManager.beginTransaction()
-                    .add(R.id.fragmentContainer, fragments[defaultOption])
-                    .commit()
+                    .add(R.id.fragmentContainer, fragments[defaultOption]).commit()
         }
     }
 }
