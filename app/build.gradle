@@ -2,10 +2,12 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
+
     defaultConfig {
         applicationId "com.kotlin.albertoquiros.gangame"
         minSdkVersion 16
@@ -15,11 +17,16 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    dataBinding{
+        enabled = true
     }
 }
 
@@ -35,4 +42,5 @@ dependencies {
     })
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation project(':commons')
+    kapt 'com.android.databinding:compiler:3.0.1'
 }
