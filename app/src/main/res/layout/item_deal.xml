@@ -68,6 +68,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_metacritic_rating"
+            android:drawablePadding="4dp"
             android:textColor="@color/blueGray"
             android:textSize="12sp"
             android:textStyle="bold"
@@ -81,6 +83,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
+            android:drawableLeft="@drawable/ic_steam_rating"
+            android:drawablePadding="4dp"
             android:textColor="@color/blueGray"
             android:textSize="12sp"
             android:textStyle="bold"
@@ -96,7 +100,7 @@
             app:layout_constraintGuide_percent="0.7" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/labelDealPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -116,20 +120,20 @@
             app:layout_constraintGuide_percent="0.5" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/labelPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:textColor="@color/colorAccent"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView5"
-            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="@+id/labelDealPrice"
+            app:layout_constraintStart_toStartOf="@+id/labelDealPrice"
             app:layout_constraintTop_toTopOf="@+id/guideline3"
             tools:text="$ 9.99" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/labelOriginal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
@@ -138,20 +142,20 @@
             android:text="@string/label_original"
             android:textColor="@color/blueGray"
             android:textSize="8sp"
-            app:layout_constraintBottom_toTopOf="@+id/textView8"
-            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintBottom_toTopOf="@+id/labelOriginalPrice"
+            app:layout_constraintEnd_toStartOf="@+id/labelDealPrice"
             app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/labelOriginalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/blueGray"
             android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView6"
-            app:layout_constraintEnd_toEndOf="@+id/textView7"
-            app:layout_constraintStart_toStartOf="@+id/textView7"
-            app:layout_constraintTop_toTopOf="@+id/textView6"
+            app:layout_constraintBottom_toBottomOf="@+id/labelPrice"
+            app:layout_constraintEnd_toEndOf="@+id/labelOriginal"
+            app:layout_constraintStart_toStartOf="@+id/labelOriginal"
+            app:layout_constraintTop_toTopOf="@+id/labelPrice"
             tools:text="$ 100.00" />
 
     </android.support.constraint.ConstraintLayout>
