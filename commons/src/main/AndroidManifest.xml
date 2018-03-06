@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.amqo.commons" />
+    package="com.amqo.commons">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

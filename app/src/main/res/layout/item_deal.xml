@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="deal"
             type="com.kotlin.albertoquiros.gangame.Deal" />
@@ -28,12 +29,12 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="Deal thumbnail"
+                app:imageUrl="@{deal.thumbDeal}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="1:0.5"
                 app:layout_constraintEnd_toStartOf="@+id/guideline"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_thumb_demo" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline"
@@ -161,9 +162,9 @@
                 android:id="@+id/labelOriginalPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{deal.normalPriceFormatted}"
                 android:textColor="@color/blueGray"
                 android:textSize="10sp"
-                android:text="@{deal.normalPriceFormatted}"
                 app:layout_constraintBottom_toBottomOf="@+id/labelPrice"
                 app:layout_constraintEnd_toEndOf="@+id/labelOriginal"
                 app:layout_constraintStart_toStartOf="@+id/labelOriginal"

@@ -8,9 +8,9 @@ object PriceFormatter {
 data class Deal(var title: String,
                 var salePrice: Float,
                 var normalPrice: Float,
-                var metacriticScore: Float,
+                var metacriticScore: Int,
                 var steamRating: Int,
-                var thumb: String) {
+                var thumbDeal: String) {
 
     val salePriceFormatted: String
         get() = PriceFormatter.priceFormatted(salePrice)
@@ -25,7 +25,7 @@ data class TopGame(var title: String,
                    var publisher: String,
                    var price: Float,
                    var position: Int,
-                   var thumb: String) {
+                   var thumbTop: String) {
 
     val priceFormatted: String
         get() = PriceFormatter.priceFormatted(price)
