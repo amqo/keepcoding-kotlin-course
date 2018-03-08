@@ -1,7 +1,7 @@
 package com.kotlin.albertoquiros.gangame
 
 object PriceFormatter {
-    val FORMAT_PRICE = "$%.2f"
+    private const val FORMAT_PRICE = "$%.2f"
     fun priceFormatted(price: Float) = String.format(FORMAT_PRICE, price)
 }
 
