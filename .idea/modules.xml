@@ -9,7 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
       <module fileurl="file://C:\Users\alberto.quiros\Documents\Cursos\KeepCoding_Kotlin\Project\commons\commons.iml" filepath="C:\Users\alberto.quiros\Documents\Cursos\KeepCoding_Kotlin\Project\commons\commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/sdk/sdk.iml" filepath="$PROJECT_DIR$/sdk/sdk.iml" />
-      <module fileurl="file://C:\Users\Alberto\Desarrollo\Cursos\KeepCoding\Kotlin\sdk\sdk.iml" filepath="C:\Users\Alberto\Desarrollo\Cursos\KeepCoding\Kotlin\sdk\sdk.iml" />
     </modules>
   </component>
 </project>
