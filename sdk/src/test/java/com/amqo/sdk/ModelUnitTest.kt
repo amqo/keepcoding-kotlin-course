@@ -96,7 +96,7 @@ class ModelUnitTest {
         Assert.assertEquals(topGame.steamRating, 97)
         Assert.assertEquals(topGame.owners, 13364200)
         Assert.assertEquals(topGame.publisher, "Valve")
-        Assert.assertEquals(topGame.price, 999F)
+        Assert.assertEquals(topGame.price, 9.99F)
         Assert.assertEquals(topGame.thumb, "http://cdn.akamai.steamstatic.com/steam/apps/10/capsule_184x69.jpg")
     }
 }

@@ -15,6 +15,7 @@ class TopGameDeserializer : JsonDeserializer<TopGame> {
         return with(json.asJsonObject) {
             topGame.thumb = String.format(BASE_IMAGE_URL, this["appid"].asInt.toString())
             topGame.steamRating = getSteamRating(this)
+            topGame.price /= 100
             topGame
         }
     }
