@@ -1,5 +1,6 @@
 package com.kotlin.albertoquiros.gangame.owned
 
+import android.support.design.widget.Snackbar
 import android.support.v7.widget.RecyclerView
 import com.amqo.commons.BR
 import com.amqo.commons.BaseListFragment
@@ -37,5 +38,10 @@ class TopOwnedFragment : BaseListFragment() {
 
     private fun showError(error: Throwable) {
         error.printStackTrace()
+        view?.let {
+            Snackbar.make(it, R.string.error_request, Snackbar.LENGTH_LONG)
+                    .setAction(R.string.label_retry, { _ -> showTopOwnedGames()})
+                    .show()
+        }
     }
 }

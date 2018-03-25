@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 
-class DataBindingRecyclerAdapter<T>(val itemVariableId: Int, val layoutResId: Int)
+class DataBindingRecyclerAdapter<T>(private val itemVariableId: Int, private val layoutResId: Int)
     : RecyclerView.Adapter<DataBindingViewHolder<T>>() {
 
     val items: MutableList<T> = mutableListOf()

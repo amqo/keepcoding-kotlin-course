@@ -6,4 +6,6 @@
     <string name="label_ratings">Ratings</string>
     <string name="label_deal_price">Deal Price</string>
     <string name="label_original">Original</string>
+    <string name="error_request">Error al cargar la información</string>
+    <string name="label_retry">Reintentar</string>
 </resources>
