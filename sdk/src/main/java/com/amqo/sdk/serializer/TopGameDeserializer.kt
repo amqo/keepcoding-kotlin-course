@@ -1,10 +1,7 @@
 package com.amqo.sdk.serializer
 
 import com.amqo.sdk.TopGame
-import com.google.gson.Gson
-import com.google.gson.JsonDeserializationContext
-import com.google.gson.JsonDeserializer
-import com.google.gson.JsonElement
+import com.google.gson.*
 import java.lang.reflect.Type
 
 class TopGameDeserializer : JsonDeserializer<TopGame> {
@@ -15,7 +12,20 @@ class TopGameDeserializer : JsonDeserializer<TopGame> {
 
     override fun deserialize(json: JsonElement, typeOfT: Type?, context: JsonDeserializationContext?): TopGame {
         val topGame = Gson().fromJson(json, TopGame::class.java)
-        topGame.thumb = String.format(BASE_IMAGE_URL, json.asJsonObject["appid"])
-        return topGame
+        return with(json.asJsonObject) {
+            topGame.thumb = String.format(BASE_IMAGE_URL, this["appid"].asInt.toString())
+            topGame.steamRating = getSteamRating(this)
+            topGame
+        }
+    }
+
+    private fun getSteamRating(json: JsonObject): Int {
+        return with(json["score_rank"]) {
+            if (asString.isEmpty()) {
+                0
+            } else {
+                asInt
+            }
+        }
     }
 }

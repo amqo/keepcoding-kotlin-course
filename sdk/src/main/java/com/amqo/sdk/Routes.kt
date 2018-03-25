@@ -8,7 +8,7 @@ object Routes {
 
     const val BASE_URL = "https://steamspy.com/api.php/"
 
-    const val GET_TOP_RATED_GAMES = "$BASE_URL_STEAM_SPY?request=top100gamesin2weeks"
+    const val GET_TOP_RATED_GAMES = "$BASE_URL_STEAM_SPY?request=top100in2weeks"
     const val GET_MOST_OWNED_GAMES = "$BASE_URL_STEAM_SPY?request=top100owned"
     const val GET_DEALS = "$BASE_URL_CHEAP_SHARK/deals?storeID=$CHEAP_SHARK_STEAM_STORE"
 }

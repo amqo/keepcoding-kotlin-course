@@ -19,7 +19,7 @@ abstract class BaseListFragment : BaseFragment() {
 
         listAdapter = getAdapter()
 
-        view?.list?.let {
+        view.list?.let {
             with(view.list) {
                 adapter = listAdapter
                 layoutManager = LinearLayoutManager(context)
