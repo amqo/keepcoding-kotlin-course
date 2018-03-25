@@ -18,5 +18,4 @@ class TopGameDeserializer : JsonDeserializer<TopGame> {
         topGame.thumb = String.format(BASE_IMAGE_URL, json.asJsonObject["appid"])
         return topGame
     }
-
 }
